@@ -35,7 +35,7 @@ type user = {
 let codec = Jzon.object4(
   ({id, name, username, email}) => (id, name, username, email),
   ((id, name, username, email)) => Ok({id: id, name: name, username: username, email: email}),
-  Jzon.field("id", Jzon.string),
+  Jzon.field("id", Jzon.int),
   Jzon.field("name", Jzon.string),
   Jzon.field("username", Jzon.string),
   Jzon.field("email", Jzon.string),
